@@ -36,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/repo/:repoName" element={<RepoDetails />} />
         <Route path="/error" element={<TestErrorBoundary />} />
+        <Route path="/404" element={<PageNotFound />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </ErrorBoundary>
