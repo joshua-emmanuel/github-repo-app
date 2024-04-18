@@ -1,0 +1,50 @@
+.repo-list {
+  margin-block: 2rem;
+}
+
+.repos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.repo {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #dadfe4;
+}
+
+.repo h2 {
+  font-size: 1.25rem;
+}
+
+.repo a {
+  text-decoration: none;
+}
+
+@media (max-width: 50em) {
+  .repos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-more-div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.view-more-btn {
+  cursor: pointer;
+  border: none;
+  background-color: #dadfe4;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.view-more-btn:hover {
+  background-color: #ccd1d6;
+}

@@ -1,0 +1,12 @@
+.page-not-found {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.page-not-found h1 {
+  font-size: 10rem;
+  letter-spacing: -0.1em;
+  line-height: 1;
+}
