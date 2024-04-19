@@ -11,7 +11,7 @@ function Home() {
     <>
       <header>
         <div className="wrapper">
-          <h1>Joshua Emmanuel&apos;s Github Repositories</h1>
+          <h1>Joshua&apos;s Github Repos</h1>
         </div>
       </header>
       <RepoList />
@@ -21,10 +21,12 @@ function Home() {
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{error.message}</pre>
-      <button onClick={resetErrorBoundary}>Try again</button>
+    <div className="error-boundary">
+      <div className="wrapper" role="alert">
+        <h2>Something went wrong:</h2>
+        <pre>{error.message}</pre>
+        <button onClick={resetErrorBoundary}>Try again</button>
+      </div>
     </div>
   );
 }
