@@ -26,11 +26,6 @@
   color: #374151;
 }
 
-.repo-details__body-text,
-.repo-details__btns {
-  margin-left: 0.5rem;
-}
-
 .repo-details__btns {
   margin-top: 2rem;
 
