@@ -1,5 +1,5 @@
 .repo-list {
-  margin-top: 3rem;
+  margin-block: 3rem;
 }
 
 .repos {
@@ -44,10 +44,23 @@
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 75em) {
+  .repos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 50em) {
   .repos {
     grid-template-columns: 1fr;
   }
+}
+
+.loading-more-repos {
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
 .view-more-div {
@@ -71,4 +84,9 @@
 
 .view-more-btn:hover {
   background-color: #0c4a6e;
+}
+
+.loading-repos {
+  display: grid;
+  place-items: center;
 }

@@ -7,6 +7,7 @@ function RepoList() {
   const [repos, setRepos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [showViewMore, setShowViewMore] = useState(true);
+  const [fetchingRepos, setFetchingRepos] = useState(false);
 
   const fetchRepos = () => {
     fetch(
@@ -20,6 +21,7 @@ function RepoList() {
           setRepos([...repos, ...data]);
           setShowViewMore(true);
         }
+        setFetchingRepos(false);
       });
   };
 
@@ -30,6 +32,7 @@ function RepoList() {
 
   const viewMore = () => {
     setCurrentPage(currentPage + 1);
+    setFetchingRepos(true);
   };
 
   return (
@@ -51,6 +54,11 @@ function RepoList() {
                 </div>
               ))}
             </div>
+            {fetchingRepos && (
+              <div className="loading-more-repos">
+                <p>Loading...</p>
+              </div>
+            )}
             <div className="view-more-div">
               <button className="view-more-btn" onClick={viewMore}>
                 {showViewMore ? "View More Repos" : "No more repos"}
@@ -58,7 +66,9 @@ function RepoList() {
             </div>
           </>
         ) : (
-          <p>Loading repositories...</p>
+          <div className="loading-repos">
+            <p>Loading repositories...</p>
+          </div>
         )}
       </div>
     </section>
