@@ -1,5 +1,5 @@
 .repo-list {
-  margin-block: 4rem;
+  margin-block: 2rem;
 }
 
 .repos {
@@ -37,7 +37,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .view-more-btn {
@@ -48,7 +48,7 @@
   border-radius: 0.5rem;
   padding: 1rem;
   margin-inline: auto;
-  color: #e0f2fe;
+  color: white;
   background-color: #082f49;
 }
 
