@@ -6,15 +6,15 @@ function RepoDetails() {
   const [repoDetails, setRepoDetails] = useState({});
   const { repoName } = useParams();
 
-  const fetchRepoDetails = () => {
-    fetch(`https://api.github.com/repos/joshua-emmanuel/${repoName}`)
-      .then((response) => response.json())
-      .then((data) => setRepoDetails(data));
-  };
-
   useEffect(() => {
+    const fetchRepoDetails = () => {
+      fetch(`https://api.github.com/repos/joshua-emmanuel/${repoName}`)
+        .then((response) => response.json())
+        .then((data) => setRepoDetails(data));
+    };
+
     fetchRepoDetails();
-  }, []);
+  }, [repoName]);
 
   return (
     <div className="repo-details">
