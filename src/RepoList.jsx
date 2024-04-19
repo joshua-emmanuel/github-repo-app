@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./assets/css/RepoList.css";
+import githubMark from "./assets/images/github-mark.svg";
 
 function RepoList() {
   const [repos, setRepos] = useState([]);
@@ -39,9 +40,14 @@ function RepoList() {
             <div className="repos">
               {repos.map((repo, index) => (
                 <div className="repo" key={index}>
-                  <h2>
-                    <Link to={`/repo/${repo.name}`}>{repo.name}</Link>
-                  </h2>
+                  <div className="repo__title">
+                    <img src={githubMark} alt="" />
+                    <h2>{repo.name}</h2>
+                  </div>
+                  <Link
+                    aria-label={`Open ${repo.name}`}
+                    to={`/repo/${repo.name}`}
+                  ></Link>
                 </div>
               ))}
             </div>

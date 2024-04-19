@@ -1,22 +1,31 @@
 .repo-list {
-  margin-block: 2rem;
+  margin-top: 3rem;
 }
 
 .repos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
 .repo {
+  position: relative;
   padding: 1.5rem;
   border-radius: 0.5rem;
   color: #082f49;
-  background-color: #f0f9ff;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.15s ease;
 }
 
-.repo:has(a:hover) {
-  background-color: #e0f2fe;
+.repo__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.repo__title img {
+  width: 8%;
 }
 
 .repo h2 {
@@ -25,6 +34,14 @@
 
 .repo a {
   text-decoration: none;
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.repo:has(a:hover) {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 50em) {
@@ -37,7 +54,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .view-more-btn {
