@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./assets/css/404.css";
+import "./assets/css/PageNotFound.css";
 
 function PageNotFound() {
   return (
@@ -7,7 +7,7 @@ function PageNotFound() {
       <div>
         <h1>404</h1>
         <p>Page Not Found</p>
-        <Link to="/">Go Back To Home</Link>
+        <Link to="/">Go Back Home</Link>
       </div>
     </div>
   );
