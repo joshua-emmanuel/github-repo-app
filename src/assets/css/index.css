@@ -1,3 +1,16 @@
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-feature-settings: "ss03", "cv08", "cv11", "cv02" 1;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,14 +28,13 @@ a {
 }
 
 body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #213547;
+  color: #082f49;
 }
 
 .wrapper {
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }

@@ -1,5 +1,5 @@
 .repo-list {
-  margin-block: 2rem;
+  margin-block: 4rem;
 }
 
 .repos {
@@ -9,9 +9,14 @@
 }
 
 .repo {
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: #dadfe4;
+  color: #082f49;
+  background-color: #f0f9ff;
+}
+
+.repo:has(a:hover) {
+  background-color: #e0f2fe;
 }
 
 .repo h2 {
@@ -32,19 +37,21 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .view-more-btn {
   cursor: pointer;
   border: none;
-  background-color: #dadfe4;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.875rem;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-inline: auto;
+  color: #e0f2fe;
+  background-color: #082f49;
 }
 
 .view-more-btn:hover {
-  background-color: #ccd1d6;
+  background-color: #0c4a6e;
 }
