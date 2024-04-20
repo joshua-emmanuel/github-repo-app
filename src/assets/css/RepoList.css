@@ -1,6 +1,77 @@
+*:focus {
+  outline-color: #082f49;
+}
+
 .repo-list {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-block: 3rem;
+}
+
+.repo-list__search {
+  margin-bottom: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.repo-list__search svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+  fill: #777e8a;
+}
+
+.repo-list__search svg.hidden {
+  display: none;
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.repo-list__search input {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.repo-list__search input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.repo-list__search input:focus {
+  outline-color: #082f49;
+}
+
+.repo-list__search button {
+  flex-shrink: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  outline-color: #082f49;
+  background-color: #082f49;
+}
+
+.repo-list__search button:hover {
+  background-color: #0c4a6e;
 }
 
 .repos {
@@ -85,6 +156,10 @@
 
 .view-more-btn:hover {
   background-color: #0c4a6e;
+}
+
+.view-more-btn[data-disabled="true"] {
+  pointer-events: none;
 }
 
 .loading-repos {
