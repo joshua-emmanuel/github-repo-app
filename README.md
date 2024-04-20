@@ -6,7 +6,7 @@ This React application fetches my GitHub repositories using the GitHub API and d
 
 ## Installation:
 
-- Clone the repository: git clone https://github.com/your-username/github-portfolio-app.git
+- Clone the repository: git clone https://github.com/joshua-emmanuel/github-repo-app.git
 - Install dependencies: `npm install`
 - Start the development server: `npm run dev`
 
