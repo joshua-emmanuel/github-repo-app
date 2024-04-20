@@ -2,6 +2,8 @@
 
 This React application fetches my GitHub repositories using the GitHub API and displays them in a user-friendly interface. It features pagination, search capabilities, detailed repository views through nested routes, error boundaries and a 404 page for non-existent routes
 
+![app screenshot](./src/assets/images/github-repo-app-screenshot.png)
+
 ## Installation:
 
 - Clone the repository: git clone https://github.com/your-username/github-portfolio-app.git
