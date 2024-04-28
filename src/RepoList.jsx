@@ -40,7 +40,7 @@ function RepoList() {
       setSearchingRepos(false);
       return;
     }
-    fetch(`https://api.github.com/users/joshua-emmanuel/repos`)
+    fetch(`https://api.github.com/users/joshua-emmanuel/repos?per_page=100`)
       .then((response) => response.json())
       .then((data) => {
         const filteredRepos = data.filter((data) =>
