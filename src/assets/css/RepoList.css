@@ -128,41 +128,9 @@
   }
 }
 
-.loading-more-repos {
-  display: grid;
-  align-items: end;
-  justify-content: center;
-  padding-top: 1rem;
-}
-
 .view-more-div {
   display: grid;
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
-}
-
-.view-more-btn {
-  cursor: pointer;
-  border: none;
-  font-weight: 500;
-  font-size: 0.875rem;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-inline: auto;
-  color: white;
-  background-color: #082f49;
-}
-
-.view-more-btn:hover {
-  background-color: #0c4a6e;
-}
-
-.view-more-btn[data-disabled="true"] {
-  pointer-events: none;
-}
-
-.loading-repos {
-  display: grid;
-  place-items: center;
 }

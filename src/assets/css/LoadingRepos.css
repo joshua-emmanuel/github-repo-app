@@ -1,0 +1,5 @@
+.loading-repos {
+  display: grid;
+  place-items: center;
+  padding-top: 1rem;
+}

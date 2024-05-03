@@ -1,0 +1,19 @@
+.view-more-btn {
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-inline: auto;
+  color: white;
+  background-color: #082f49;
+}
+
+.view-more-btn:hover {
+  background-color: #0c4a6e;
+}
+
+.view-more-btn[data-disabled="true"] {
+  pointer-events: none;
+}
