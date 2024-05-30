@@ -1,5 +1,26 @@
+<script setup>
+import RepoList from './components/RepoList.vue';
+</script>
+
 <template>
   <div>
-    <h1>Hello World</h1>
+    <header>
+      <div className="wrapper">
+        <h1>Joshua&apos;s Github Repos</h1>
+      </div>
+    </header>
+    <RepoList />
   </div>
 </template>
+
+<style scoped>
+header {
+  padding-block: 2rem;
+  background-color: white;
+}
+
+header h1 {
+  text-align: center;
+  line-height: 1.1;
+}
+</style>
