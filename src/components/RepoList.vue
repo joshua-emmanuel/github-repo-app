@@ -89,7 +89,7 @@ onMounted(() => {
       <div v-else-if="status === 'loading'">
         <p class="text-center">Loading Repositories</p>
       </div>
-      <div v-else-if="status === 'error'" class="error-message">
+      <div v-else-if="status === 'error'" class="error-message text-center">
         <p>Oops, something went wrong while loading the repositories.</p>
         <p>Please check your internet connection and try again later</p>
         <button @click="fetchRepos">Retry</button>
@@ -242,10 +242,6 @@ onMounted(() => {
   opacity: 0.5;
 }
 .text-center {
-  text-align: center;
-}
-
-.error-message {
   text-align: center;
 }
 
