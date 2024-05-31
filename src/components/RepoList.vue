@@ -34,6 +34,7 @@ function fetchRepos() {
 
 function onPaginationButtonClick(pageNumber) {
   currentPage.value = pageNumber;
+  window.scrollTo(0, 0);
 }
 
 function onSearchInputChange(event) {
