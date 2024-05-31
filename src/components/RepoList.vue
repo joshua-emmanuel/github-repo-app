@@ -27,8 +27,7 @@ function fetchRepos() {
       repos.value = data;
       status.value = 'done';
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(() => {
       status.value = 'error';
     });
 }
