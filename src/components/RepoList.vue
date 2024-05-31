@@ -229,6 +229,8 @@ onMounted(() => {
   padding: 0.5rem 0.75rem;
   border: 1px solid #082f49;
   border-radius: 0.25rem;
+  background-color: #fff;
+  transition: all 200ms ease-in;
 }
 
 .pagination button.active,
