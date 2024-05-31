@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
+import { RouterLink } from 'vue-router';
 import GithubIcon from './icons/GithubIcon.vue';
 
 const searchQuery = ref('');
@@ -83,6 +84,7 @@ onMounted(() => {
               <GithubIcon />
               <h2>{{ repo.name }}</h2>
             </div>
+            <RouterLink :to="{ path: `/repos/${repo.name}` }"></RouterLink>
           </div>
         </div>
       </div>
