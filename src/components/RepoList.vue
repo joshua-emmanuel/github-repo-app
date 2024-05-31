@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
+import RepoPagination from './RepoPagination.vue';
 import GithubIcon from './icons/GithubIcon.vue';
 
 const searchQuery = ref('');
@@ -100,26 +101,19 @@ onMounted(() => {
         <p class="text-center">No repos found for search query '{{ searchQuery }}'</p>
       </div>
       <div class="pagination" v-if="filteredRepos.length > 0">
-        <button :disabled="isPrevButtonDisabled" @click="onPaginationButtonClick(currentPage - 1)">
-          Prev
-        </button>
-        <button
-          v-for="number in numberOfPages"
-          @click="onPaginationButtonClick(number)"
-          :key="number"
-          :class="currentPage === number ? 'active' : ''"
-        >
-          {{ number }}
-        </button>
-        <button :disabled="isNextButtonDisabled" @click="onPaginationButtonClick(currentPage + 1)">
-          Next
-        </button>
+        <RepoPagination
+          :isPrevButtonDisabled="isPrevButtonDisabled"
+          :isNextButtonDisabled="isNextButtonDisabled"
+          :onPaginationButtonClick="onPaginationButtonClick"
+          :numberOfPages="numberOfPages"
+          :currentPage="currentPage"
+        />
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
+<style>
 *:focus {
   outline-color: #082f49;
 }
