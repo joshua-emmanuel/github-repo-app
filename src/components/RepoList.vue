@@ -3,6 +3,7 @@ import { ref, computed, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 import RepoPagination from './RepoPagination.vue';
 import RepoSearch from './RepoSearch.vue';
+import LoadingStatus from './LoadingStatus.vue';
 import GithubIcon from './icons/GithubIcon.vue';
 
 const searchQuery = ref('');
@@ -70,9 +71,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div v-else-if="status === 'loading'">
-        <p class="text-center">Loading Repositories</p>
-      </div>
+      <LoadingStatus data="repostories" v-else-if="status === 'loading'" />
       <div v-else-if="status === 'error'" class="error-message text-center">
         <p>Oops, something went wrong while loading the repositories.</p>
         <p>Please check your internet connection and try again later</p>
