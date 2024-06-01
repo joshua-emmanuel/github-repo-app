@@ -92,7 +92,7 @@ onMounted(() => {
 
 <style>
 *:focus {
-  outline-color: #082f49;
+  outline: 2px solid #082f49;
 }
 
 .repo-list {

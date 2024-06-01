@@ -59,7 +59,8 @@ defineProps({
   border: 1px solid rgba(0, 0, 0, 0.35);
 }
 
-.repo-search input:focus {
-  outline-color: #082f49;
+.repo-search input:focus,
+.repo-search input:focus-visible {
+  outline: 2px solid #082f49;
 }
 </style>
