@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 import LoadingStatus from './LoadingStatus.vue';
+import ErrorMessage from './ErrorMessage.vue';
 import GithubIcon from '../components/icons/GithubIcon.vue';
 
 const repoDetails = ref({});
@@ -51,11 +52,7 @@ onMounted(() => fetchRepoDetails());
       </div>
     </div>
     <LoadingStatus data="repo details" v-else-if="status === 'loading'" />
-    <div v-else-if="status === 'error'" class="error-message text-center">
-      <p>Oops, something went wrong while loading the repo details</p>
-      <p>Please check your internet connection and try again later</p>
-      <button @click="fetchRepoDetails">Retry</button>
-    </div>
+    <ErrorMessage data="repo details" v-else-if="status === 'error'" />
   </div>
 </template>
 

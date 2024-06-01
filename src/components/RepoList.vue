@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router';
 import RepoPagination from './RepoPagination.vue';
 import RepoSearch from './RepoSearch.vue';
 import LoadingStatus from './LoadingStatus.vue';
+import ErrorMessage from './ErrorMessage.vue';
 import GithubIcon from './icons/GithubIcon.vue';
 
 const searchQuery = ref('');
@@ -71,12 +72,8 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <LoadingStatus data="repostories" v-else-if="status === 'loading'" />
-      <div v-else-if="status === 'error'" class="error-message text-center">
-        <p>Oops, something went wrong while loading the repositories.</p>
-        <p>Please check your internet connection and try again later</p>
-        <button @click="fetchRepos">Retry</button>
-      </div>
+      <LoadingStatus data="repositories" v-else-if="status === 'loading'" />
+      <ErrorMessage data="repositories" v-else-if="status === 'error'" />
       <div v-if="searchQuery && filteredRepos.length === 0 && status === 'done'">
         <p class="text-center">No repos found for search query '{{ searchQuery }}'</p>
       </div>
