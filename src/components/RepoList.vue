@@ -80,8 +80,8 @@ onMounted(() => {
           )"
           :key="repo.id"
         >
-          <div className="repo">
-            <div className="repo__title">
+          <div class="repo">
+            <div class="repo__title">
               <GithubIcon />
               <h2>{{ repo.name }}</h2>
             </div>
